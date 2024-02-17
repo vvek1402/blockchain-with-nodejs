@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify Certificate</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <form method="post" action="/verify-certificate" id="form" class="validate form">
+    <h2>Verify Certificate</h2>
+    <p>Enter Certificate Id to verify</p>
+    <div class="form-field">
+      <label for="certificateId">Certificate Id : </label>
+      <input type="text" placeholder="Enter certificate Id" id="certificateId" name="certificateId" required />
+    </div>
+    <div class="form-field">
+      <label for=""></label>
+      <input type="submit" value="Verify Certificate" />
+    </div>
+    <div class="crtverify">
+      <% if (isValid !=null) { %>
+        <p class="<%= isValid ? 'green btn' : 'red btn' %>">Valid: <%= isValid ? 'Yes' : 'No' %>
+        </p>
+        <% } %>
+    </div>
+    <div class="links">
+      <a class="back" href="/">Back</a>
+    </div>
+  </form>
+</body>
+
+</html>

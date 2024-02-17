@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certification Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form method="post" action="/issue-certificate" id="form" class="validate form">
+    <h2>Certification Platform</h2>
+    <p>Enter Details to issue certificate</p>
+    <div class="form-field">
+      <label for="recipient">Recipient Name:</label>
+      <input type="text" id="recipient" name="recipient" required />
+    </div>
+    <div class="form-field">
+      <label for="certificateName">Certificate Name:</label>
+      <input type="text" id="certificateName" name="certificateName" required />
+    </div>
+    <div class="form-field">
+      <input type="submit" value="Issue Certificate" />
+    </div>
+    <div class="crtid">
+      <% if (certificateId) { %>
+        <p class="btn">Certificate Id: <%= certificateId %>
+        </p>
+        <% } %>
+    </div>
+    <div class="links">
+      <a class="back" href="/verify-certificate">Verify Certificate</a>
+    </div>
+  </form>
+
+</body>
+
+</html>
